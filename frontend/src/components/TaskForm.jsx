@@ -145,6 +145,8 @@ const TaskForm = ({ onTaskAdded }) => {
             {loadingAI ? "Analyzing..." : "AI Suggest"}
           </button>
 
+
+          // Submit button is always enabled, but will show error if title is empty
           <button
             type="submit"
             className="submit-btn"
