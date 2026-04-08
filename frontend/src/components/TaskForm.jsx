@@ -70,11 +70,12 @@ const TaskForm = ({ onTaskAdded }) => {
 
   return (
     <div className="glass-panel">
-      <h2 style={{ marginBottom: "1.25rem", fontSize: "1.2rem", fontWeight: 600 }}>
+      <h2
+        style={{ marginBottom: "1.25rem", fontSize: "1.2rem", fontWeight: 600 }}
+      >
         Create New Task
       </h2>
       <form onSubmit={handleSubmit} className="task-form">
-
         {/* Row 1: Title + Description side-by-side */}
         <div style={{ display: "flex", gap: "1rem" }}>
           <div className="form-group" style={{ flex: 1 }}>
@@ -102,7 +103,14 @@ const TaskForm = ({ onTaskAdded }) => {
         </div>
 
         {/* Row 2: Priority + Deadline + AI button + Submit */}
-        <div style={{ display: "flex", gap: "1rem", alignItems: "flex-end", flexWrap: "wrap" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "1rem",
+            alignItems: "flex-end",
+            flexWrap: "wrap",
+          }}
+        >
           <div className="form-group" style={{ flex: 1, minWidth: "120px" }}>
             <label>Priority</label>
             <select
@@ -145,8 +153,6 @@ const TaskForm = ({ onTaskAdded }) => {
             {loadingAI ? "Analyzing..." : "AI Suggest"}
           </button>
 
-
-          // Submit button is always enabled, but will show error if title is empty
           <button
             type="submit"
             className="submit-btn"
